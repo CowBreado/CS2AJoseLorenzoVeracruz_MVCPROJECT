@@ -11,7 +11,7 @@ namespace CS2AJoseLorenzoVeracruz_MVCPROJECT.BusLogic.Repository
 {
     public interface IGenericRepository<T> where T : class
     {
-        //T GetById(int id);
+        T GetById(int id);
 
     }
 }
