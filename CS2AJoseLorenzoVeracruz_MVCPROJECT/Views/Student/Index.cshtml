@@ -1,5 +1,51 @@
 ﻿@model IEnumerable<CS2AJoseLorenzoVeracruz_MVCPROJECT.BusLogic.Model.tblStudent>
 
+
+<main class="tablecenter">
+    <div class="table__overflow">
+        <section class="table__header">
+            <h1>Student Information</h1>
+            <a class="btn btn-dark" href="/Student/AddNewStudent">Add New Student</a>
+        </section>
+
+        <section class="table__body">
+            <table id="student-table" class="table table-striped table-bordered" width="100%">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Course</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var student in Model)
+                    {
+                        <tr>
+                            <td>@student.id</td>
+                            <td>@student.FirstName</td>
+                            <td>@student.LastName</td>
+                            <td>@student.Age</td>
+                            <td>@student.Course</td>
+                        </tr>
+                    }
+                </tbody>
+        </section>
+
+    </div>
+</main>    
+
+
+
+
+
+
+
+
+
+
+
 <div>
     <h1>Student List</h1>
     <table>
@@ -9,7 +55,6 @@
             <th>Age</th>
             <th>Course</th>
         </tr>
-
         
             @foreach(var students in Model)
             {
@@ -20,6 +65,26 @@
                 <td>@students.Course</td>
             </tr>
             }
-        
     </table>
 </div>
+
+
+
+
+
+
+<div>
+    <h2>Options</h2>
+    <ul>
+        <li><button>Add Operator Student</button></li>
+        <li><button>View Operator Student Files</button></li>
+        <li><button>Update Operator Student Files</button></li>
+        <li><button>Delete Operator Student Files</button></li>
+    </ul>
+</div>
+
+
+
+
+
+
