@@ -37,6 +37,22 @@ namespace CS2AJoseLorenzoVeracruz_MVCPROJECT.Controllers
                 return Json(new { success = false, message = "An error occured"});
             }
         }
+
+        [HttpGet]
+        public IActionResult GetStudentByID(int id)
+        {
+            try
+            {
+                var student = _studentService.getById(id);
+                return View(id);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error editting student");
+                return Json(new { success = false, message = "An error occured" });
+            }
+        }
+
     }
  
 }

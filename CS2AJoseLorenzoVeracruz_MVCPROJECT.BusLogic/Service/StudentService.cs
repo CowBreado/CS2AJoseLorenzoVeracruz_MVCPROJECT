@@ -15,10 +15,6 @@ namespace CS2AJoseLorenzoVeracruz_MVCPROJECT.BusLogic.Service
         {
             return _studentRepository.Add(student);
         }
-
-
-
-
         public tblStudent getById(int Id)
         { 
            return _studentRepository.GetById(Id);

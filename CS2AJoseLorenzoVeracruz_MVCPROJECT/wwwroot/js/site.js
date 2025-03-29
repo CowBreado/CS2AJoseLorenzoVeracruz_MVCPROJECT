@@ -9,10 +9,26 @@ $(document).ready(function () {
             LastName: $('#LastName').val(),
             Age: $('#Age').val(),
             Course: $('#Course').val(),
+            id: $('#id').val(),
         };
         addStudent(student);
     });
 });
+
+$(document).ready(function () {
+    $('getStudentByID').on('submit', function (e) {
+        e.preventDefault();
+        const student = {
+            FirstName: $('#FirstName').val(),
+            LastName: $('#LastName').val(),
+            Age: $('#Age').val(),
+            Course: $('#Course').val(),
+            id: $('#id').val(),
+        };
+        getStudentByID(student);
+    });
+});
+
 
 
 
@@ -32,12 +48,13 @@ const addStudent = async (student) => {
     }
 };
 
-
 const getStudentByID = async (id) => {
     try {
-
+        const studentID = await AjaxGET('/Student/GetStudentByID/', id);
+        if (studentID.success) {
+            alert('Student Found!');
+        } 
     }
-    catch {
+};
 
-    }
-}
+
