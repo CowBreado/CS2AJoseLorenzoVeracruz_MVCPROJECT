@@ -32,8 +32,8 @@
                             <td>@student.Age</td>
                             <td>@student.Course</td>
                             <td>
-                                <a class="btn btn-warning" href="/Student/GetStudentByID/@student.id">Edit</a>
-                                <a class="btn btn-danger" href="/Student/AddNewStudent">Delete</a>
+                                <a class="btn btn-warning" href="/Student/EditStudent/@student.id">Edit</a>
+                                <a class="btn btn-danger" href="/Student/DeleteStudent">Delete</a>
                             </td>
                         </tr>
                     }
@@ -45,47 +45,3 @@
 
 
 
-
-
-
-
-
-<!--
-<div>
-    <h1>Student List</h1>
-    <table>
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Age</th>
-            <th>Course</th>
-        </tr>
-        
-            @foreach(var students in Model)
-            {
-            <tr>
-                <td>@students.FirstName</td>
-                <td>@students.LastName</td>
-                <td>@students.Age</td>
-                <td>@students.Course</td>
-            </tr>
-            }
-    </table>
-</div>
-
-
-
-
-
-
-<div>
-    <h2>Options</h2>
-    <ul>
-        <li><button>Add Operator Student</button></li>
-        <li><button>View Operator Student Files</button></li>
-        <li><button>Update Operator Student Files</button></li>
-        <li><button>Delete Operator Student Files</button></li>
-    </ul>
-</div>
-
--->

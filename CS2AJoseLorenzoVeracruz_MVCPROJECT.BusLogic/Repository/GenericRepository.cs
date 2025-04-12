@@ -9,11 +9,6 @@ using System.Text;
 namespace CS2AJoseLorenzoVeracruz_MVCPROJECT.BusLogic.Repository
 {
 
-
-
-
-
-
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
         IDbConnection _connection;
@@ -25,10 +20,6 @@ namespace CS2AJoseLorenzoVeracruz_MVCPROJECT.BusLogic.Repository
 
             _connection = new SqlConnection(connectionString);
         }
-
-
-
-
 
 
         public T AddParentAttribute(T entity)
@@ -62,12 +53,6 @@ namespace CS2AJoseLorenzoVeracruz_MVCPROJECT.BusLogic.Repository
 
 
 
-
-
-
-
-
-
         public bool Add(T entity)
         {
             int rowsEffected = 0;
@@ -85,17 +70,6 @@ namespace CS2AJoseLorenzoVeracruz_MVCPROJECT.BusLogic.Repository
             return rowsEffected > 0 ? true : false;
         }
 
-
-
-
-
-
-
-
-
-
-
-
         public IEnumerable<T> GetAll()
         {
             IEnumerable<T> result = null;
@@ -110,11 +84,6 @@ namespace CS2AJoseLorenzoVeracruz_MVCPROJECT.BusLogic.Repository
 
             return result;
         }
-
-
-
-
-
 
         public T GetById(int id)
         {
@@ -134,13 +103,6 @@ namespace CS2AJoseLorenzoVeracruz_MVCPROJECT.BusLogic.Repository
         }
 
 
-
-
-
-
-
-
-
         public T Delete(int id)
         {
             IEnumerable<T> result = null;
@@ -158,13 +120,6 @@ namespace CS2AJoseLorenzoVeracruz_MVCPROJECT.BusLogic.Repository
             }
             return result.FirstOrDefault();
         }
-
-
-
-
-
-
-
 
 
         public bool Update(T entity)
@@ -202,14 +157,6 @@ namespace CS2AJoseLorenzoVeracruz_MVCPROJECT.BusLogic.Repository
 
 
 
-
-
-
-
-
-
-
-
         private string GetTableName()
         {
             string tableName = "";
@@ -223,13 +170,6 @@ namespace CS2AJoseLorenzoVeracruz_MVCPROJECT.BusLogic.Repository
 
             return type.Name;
         }
-
-
-
-
-
-
-
 
 
         public static string GetKeyColumnName()

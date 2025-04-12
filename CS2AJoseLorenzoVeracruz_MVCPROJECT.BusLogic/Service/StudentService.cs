@@ -19,6 +19,18 @@ namespace CS2AJoseLorenzoVeracruz_MVCPROJECT.BusLogic.Service
         { 
            return _studentRepository.GetById(Id);
         }
+    
+        public bool Update(tblStudent student)
+        {
+           return _studentRepository.Update(student);
+        }
+
+        public tblStudent Delete(int Id)
+        {
+            return _studentRepository.Delete(Id);
+        }
+
+
 
 
     }
